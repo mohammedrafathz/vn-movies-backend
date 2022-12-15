@@ -23,7 +23,7 @@ const startServer = async () => {
   })
   
   await apolloServer.start();
-  apolloServer.applyMiddleware({app: app})
+  apolloServer.applyMiddleware({app: app, path:"/"})
 
   app.listen(4000, () => console.log('Server started on port 4000'))
 };
